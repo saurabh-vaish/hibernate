@@ -9,6 +9,7 @@ public class HibernateUtil {
 	
 	// SessionFactory will load driver , create connection and prepare statements  
 	
+	
 	private static SessionFactory sf=null;
 	
 	static {

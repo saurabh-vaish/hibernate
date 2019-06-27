@@ -21,7 +21,9 @@ public class TestSave {
 			e.setEmpName("srv1");
 			e.setEmpSal(15.2);
 			
-			ses.save(e);
+			ses.save(e);  
+			
+			ses.saveOrUpdate(e); // here it behaves as a save or update i.e. if PK not found in table then save , if found then update
 			
 			tx.commit();
 			
