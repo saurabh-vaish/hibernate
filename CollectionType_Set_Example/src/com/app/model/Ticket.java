@@ -12,6 +12,21 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
+/**
+ * For storing multiple data into one column or variable collections are used  , here one child table is created for every collection
+ * 
+ * 	Collections are two types --- Index based --> List ,Map ,IdBag    (3 column)
+ * 								Non Index Based --> Set , Bag		  (2 column)
+ * 
+ * @ElementCollecton ---  specifies that it is a collection column
+ *
+ * @CollectionTable --  used to specify collection table 
+ *
+ *	Fetch type is useful in fetching data from db -- EAGER, LAZY
+ *
+ * */
+
+
 @Entity
 @Table(name="tickettab")
 public class Ticket {
@@ -55,9 +70,6 @@ public class Ticket {
 		this.names = names;
 		this.seatNums = seatNums;
 	}
-
-
-	
 
 
 	public Integer getTicketId() {
