@@ -27,7 +27,7 @@ public class Client {
 	private String loc;
 	
 	
-	@ManyToMany
+	@ManyToMany(fetch= FetchType.EAGER)		// default is Lazy , so making eager so that child will also come
 	@JoinTable(name="cln_prj_tab",
 		joinColumns=@JoinColumn(name="cidfk"),
 		inverseJoinColumns=@JoinColumn(name="pidfk")
