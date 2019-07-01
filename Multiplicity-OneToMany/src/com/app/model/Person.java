@@ -24,7 +24,7 @@ public class Person {
 	@Column(name="paddr")
 	private String perAddr;
 	
-	@OneToMany
+	@OneToMany(fetch= FetchType.EAGER)		// default is Lazy , so making eager so that child will also come
 	@JoinColumn(name="pidfk")
 	private Set<Vehicle> vobs = new HashSet<>();
 
